@@ -2,21 +2,25 @@ spring:
   profiles:
     active:
       - dev
-
 ---
+server:
+  port: 8201
 spring:
-  profiles: dev  # 开发模式
-    application:
-      name: dictservice-provider-user-dev
-
+  profile: dev
+  application:
+      name: microservicecloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
 ---
+server:
+  port: 8202
 spring:
-  profiles:
-    active:
-      - test
-
----
-spring:
-  profiles: test  # 测试模式
-    application:
-      name: dictservice-provider-user-test
+  profiles: test
+  application:
+    name:  microservicecloud-config-client
+eureka:
+  client:
+    service-url:
+        defaultZone:  http://eureka-test.com:7001/eureka/
