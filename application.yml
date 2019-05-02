@@ -1,22 +1,22 @@
 spring:
-  profile:
+  profiles:
     active:
       - dev
 ---
 server:
   port: 7001
 spring:
-  profile: dev  # 开发模式
+  profiles: dev  # 开发模式
     application:
       name: dictservice-provider-user-dev
 
 ---
 spring:
-  profile:
+  profiles:
     active:
       - test
 ---
 spring:
-  profile: test  # 测试模式
+  profiles: test  # 测试模式
     application:
       name: dictservice-provider-user-test
