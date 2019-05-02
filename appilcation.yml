@@ -1,10 +1,10 @@
----
 spring:
   profiles:
     active:
       - dev
-
 ---
+server:
+  port: 7001
 spring:
   profiles: dev  # 开发模式
     application:
@@ -15,7 +15,6 @@ spring:
   profiles:
     active:
       - test
-
 ---
 spring:
   profiles: test  # 测试模式
